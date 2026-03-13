@@ -1,0 +1,138 @@
+.profile-page {
+  padding-top: calc(var(--header-height) + var(--space-lg));
+  max-width: 700px;
+}
+
+.profile-hero {
+  position: relative;
+  margin-bottom: var(--space-lg);
+}
+
+.profile-cover {
+  height: 200px;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.5));
+}
+
+.profile-avatar-section {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-lg);
+  margin-top: -50px;
+  padding: 0 var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.profile-avatar-section .avatar-2xl {
+  border: 4px solid var(--bg-primary);
+}
+
+.profile-name-section {
+  padding-bottom: var(--space-md);
+}
+
+.profile-name-section h1 {
+  font-size: var(--font-2xl);
+  font-weight: 800;
+}
+
+.profile-location {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  margin: 2px 0 var(--space-xs);
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--space-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-md);
+}
+
+.profile-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.profile-stat-value {
+  font-size: var(--font-2xl);
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profile-stat-label {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.profile-actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.profile-edit .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.profile-edit h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.profile-about .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.profile-section h3 {
+  font-size: var(--font-base);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  color: var(--text-secondary);
+}
+
+.profile-section p {
+  font-size: var(--font-sm);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.profile-trips {
+  margin-top: var(--space-lg);
+}
+
+.profile-trips > h3 {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+}

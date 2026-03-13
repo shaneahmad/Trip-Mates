@@ -1,0 +1,231 @@
+.discover-page {
+  padding-top: calc(var(--header-height) + var(--space-lg));
+}
+
+.discover-container {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.discover-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.discover-card.swiping-left {
+  transform: translateX(-120%) rotate(-15deg);
+  opacity: 0;
+}
+
+.discover-card.swiping-right {
+  transform: translateX(120%) rotate(15deg);
+  opacity: 0;
+}
+
+.discover-card-cover {
+  position: relative;
+  height: 280px;
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.discover-card-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.8));
+}
+
+.discover-card-info {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-lg);
+}
+
+.discover-card-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.discover-card-name {
+  font-size: var(--font-2xl);
+  font-weight: 800;
+}
+
+.discover-card-age {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.discover-card-location {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.discover-card-body {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.discover-card-bio {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.discover-card-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.discover-detail-label {
+  font-size: var(--font-xs);
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.discover-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.discover-card-stats {
+  display: flex;
+  justify-content: space-around;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border);
+}
+
+.discover-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.discover-stat-value {
+  font-size: var(--font-xl);
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.discover-stat-label {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+}
+
+/* Actions */
+.discover-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.discover-action-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+}
+
+.discover-action-btn:hover {
+  transform: scale(1.1);
+}
+
+.discover-action-btn:active {
+  transform: scale(0.95);
+}
+
+.discover-pass {
+  background: var(--bg-secondary);
+  color: var(--text-tertiary);
+  border: 2px solid var(--border);
+}
+
+.discover-pass:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.discover-like {
+  background: var(--accent-gradient);
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+.discover-like:hover {
+  box-shadow: 0 0 30px rgba(236, 72, 153, 0.5);
+}
+
+/* Match Popup */
+.match-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.match-popup-content {
+  text-align: center;
+  padding: var(--space-2xl);
+}
+
+.match-popup-emoji {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: var(--space-lg);
+  animation: float 2s ease-in-out infinite;
+}
+
+.match-popup-content h2 {
+  font-size: var(--font-4xl);
+  font-weight: 800;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-sm);
+}
+
+.match-popup-content p {
+  font-size: var(--font-lg);
+  color: var(--text-primary);
+}
+
+.match-popup-sub {
+  color: var(--text-secondary) !important;
+  font-size: var(--font-sm) !important;
+  margin-top: var(--space-sm);
+}
+
+.discover-card-skeleton {
+  height: 500px;
+  border-radius: var(--radius-xl);
+}
