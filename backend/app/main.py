@@ -25,7 +25,11 @@ app = FastAPI(
 import os
 
 # CORS
-cors_origins = ["http://localhost:5173", "http://localhost:3000"]
+cors_origins = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://tripmates-ui.vercel.app"
+]
 env_origins = os.getenv("CORS_ORIGINS")
 if env_origins:
     cors_origins.extend([origin.strip() for origin in env_origins.split(",")])
